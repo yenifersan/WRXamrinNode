@@ -13,7 +13,7 @@ let productos = {
     });
   },
   store( req, res ){
-    val_nombre = req.body.nombre;
+    val_nombre = req.body.descripcion;
     val_precio = req.body.precio;
     val_vendido = req.body.vendido;
     let sql = "INSERT INTO productosXamarin(descripcion,precio,vendido) VALUES(?,?,?)";
@@ -41,7 +41,7 @@ let productos = {
   edit( req, res ){
     console.log(req.body)
     val_id = req.body.codigo;
-    val_nombre = req.body.nombre;
+    val_nombre = req.body.descripcion;
     val_precio = req.body.precio;
     val_vendido = req.body.vendido;
     let sql = "UPDATE productosxamarin SET descripcion=?, precio=?, vendido=? WHERE codigo=?";
